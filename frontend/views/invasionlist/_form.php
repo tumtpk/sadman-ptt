@@ -34,6 +34,11 @@ use common\models\Procedure;
                 </div>
             </div>
             <div class="row">
+                <div class="col-md-6">
+                    <?= $form->field($model, 'date')->textInput(['maxlength' => true]) ?>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-12">
                     <?= $form->field($model, 'inspection_result_TMM')->textarea(['rows' => '3']) ?>
                 </div>
