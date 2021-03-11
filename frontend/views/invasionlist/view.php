@@ -6,37 +6,39 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Invasionlist */
 
-$this->title = $model->idinvasionlist;
+$this->title = $model->detail;
 $this->params['breadcrumbs'][] = ['label' => 'Invasionlists', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="invasionlist-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->idinvasionlist], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->idinvasionlist], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
-
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'idinvasionlist',
-            'detail',
-            'kp_id',
-            'severity',
-            'procedure_id',
-            'inspection_result_TMM',
-            'date',
-        ],
-    ]) ?>
-
+    <h3><?= Html::encode($this->title) ?></h3>
+    <div class="row clearfix">
+        <div class="col-xl-12 col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-body ribbon">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <?= DetailView::widget([
+                                'model' => $model,
+                                'attributes' => [
+                                    // 'idinvasionlist',
+                                    'detail',
+                                    'kp_id',
+                                    'severity',
+                                    'procedure_id',
+                                    'inspection_result_TMM',
+                                    'date',
+                                ],
+                            ]) ?>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="" class="img-view">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

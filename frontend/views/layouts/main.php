@@ -181,6 +181,10 @@ $user_font_size = Yii::$app->db->createCommand("SELECT font_size FROM `users` WH
     margin-left: auto;
     margin-right: auto;
   }
+  .img-view{
+    width:100%;
+    height:100%;
+  }
 </style>
 
 <?php $this->beginPage();?>

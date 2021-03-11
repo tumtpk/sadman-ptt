@@ -5,17 +5,24 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Invasionlist */
 
-$this->title = 'Update Invasionlist: ' . $model->idinvasionlist;
-$this->params['breadcrumbs'][] = ['label' => 'Invasionlists', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->idinvasionlist, 'url' => ['view', 'id' => $model->idinvasionlist]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'อัพเดทรายการบุกรุก ' . $model->detail;
+$this->params['breadcrumbs'][] = ['label' => 'รายการบุกรุก', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="invasionlist-update">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h3>
 
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
+    <div class="row clearfix">
+        <div class="col-xl-12 col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-body ribbon">
+                    <?= $this->render('_form', [
+                        'model' => $model,
+                    ]) ?>
 
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

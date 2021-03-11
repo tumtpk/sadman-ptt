@@ -17,34 +17,34 @@ use common\models\Procedure;
     <div class="row">
         <div class="col-md-6">
             <?php $form = ActiveForm::begin(); ?>
-                <div class="row">
-                    <div class="col-md-6">
-                        <?= $form->field($model, 'kp_id')->dropdownList(ArrayHelper::map(Kptag::find()->all(), "idkp_tag", "SP_KP", "name_kp"), ['prompt' => 'เลือก..']) ?>
-                    </div>
-                    <div class="col-md-6">
-                        <?= $form->field($model, 'detail')->textInput(['maxlength' => true]) ?>
+            <div class="row">
+                <div class="col-md-6">
+                    <?= $form->field($model, 'kp_id')->dropdownList(ArrayHelper::map(Kptag::find()->select(["idkp_tag", "concat(SP_KP,' ',name_kp) as SP_KP"])->all(), "idkp_tag", "SP_KP"), ['prompt' => 'เลือก..']) ?>
+                </div>
+                <div class="col-md-6">
+                    <?= $form->field($model, 'detail')->textInput(['maxlength' => true]) ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <?= $form->field($model, 'severity')->dropdownList(ArrayHelper::map(Severity::find()->all(), "idseverity", "severity_name"), ['prompt' => 'เลือก..']) ?>
+                </div>
+                <div class="col-md-6">
+                    <?= $form->field($model, 'procedure_id')->dropdownList(ArrayHelper::map(Procedure::find()->select(["idprocedure", "concat(idprocedure,' ',procedureName) as procedureName"])->all(), "idprocedure", "procedureName"), ['prompt' => 'เลือก..']) ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <?= $form->field($model, 'inspection_result_TMM')->textarea(['rows' => '3']) ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <?= Html::submitButton('บันทึก', ['class' => 'btn btn-success']) ?>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <?= $form->field($model, 'severity')->dropdownList(ArrayHelper::map(Severity::find()->all(), "idseverity", "severity_name"), ['prompt' => 'เลือก..']) ?>
-                    </div>
-                    <div class="col-md-6">
-                        <?= $form->field($model, 'procedure_id')->dropdownList(ArrayHelper::map(Procedure::find()->select(["idprocedure", "concat(idprocedure,' ',procedureName) as procedureName"])->all(), "idprocedure", "procedureName"), ['prompt' => 'เลือก..']) ?>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <?= $form->field($model, 'inspection_result_TMM')->textarea(['rows' => '3']) ?>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <?= Html::submitButton('บันทึก', ['class' => 'btn btn-success']) ?>
-                        </div>
-                    </div>
-                </div>
+            </div>
             <?php ActiveForm::end(); ?>
         </div>
         <div class="col-md-4">
