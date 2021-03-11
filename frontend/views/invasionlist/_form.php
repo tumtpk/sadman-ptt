@@ -25,7 +25,7 @@ use common\models\Procedure;
             <?= $form->field($model, 'severity')->dropdownList(ArrayHelper::map(Severity::find()->all(), "idseverity", "severity_name"), ['prompt' => 'เลือก..']) ?>
 
 
-            <?= $form->field($model, 'procedure_id')->dropdownList(ArrayHelper::map(Procedure::find()->all(), "idprocedure", "procedureName"), ['prompt' => 'เลือก..']) ?>
+            <?= $form->field($model, 'procedure_id')->dropdownList(ArrayHelper::map(Procedure::find()->select(["idprocedure", "concat(idprocedure,' ',procedureName) as procedureName"])->all(), "idprocedure", "procedureName"), ['prompt' => 'เลือก..']) ?>
 
         </div>
         <div class="col-md-4">
