@@ -661,34 +661,6 @@ $user_font_size = Yii::$app->db->createCommand("SELECT font_size FROM `users` WH
         <?php endforeach; ?>
       <?php endif; ?>
 
-
-   <!-- temporary menu -->
-                  <li class="">
-                    <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="fas fa-user-cog"></i><span>เมนูเพิ่มเติม</span></a>
-                    <ul aria-expanded="true" class="collapse in">
-
-                    <li class="">
-                       <a href="index.php?r=users/dashbord">
-                        <span>dashbord 1</span>
-                      </a>
-                    </li>
-                    <li class="">
-                       <a href="index.php?r=users/dashbord2">
-                        <span>dashbord 2</span>
-                      </a>
-                    </li>
-                    <li class="">
-                       <a href="index.php?r=invasionlist">
-                        <span>รายการบุกรุก</span>
-                      </a>
-                    </li>
-                    <li class="">
-                       <a href="index.php?r=kptag">
-                        <span>จุดที่บุกรุก</span>
-                      </a>
-                    </li>
-                    </ul>
-              </li>
     </ul>
   </nav>        
 </div>
