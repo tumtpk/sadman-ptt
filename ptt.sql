@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 11, 2021 at 12:44 PM
--- Server version: 10.5.5-MariaDB-1:10.5.5+maria~focal
--- PHP Version: 7.4.6
+-- Generation Time: Mar 11, 2021 at 01:45 PM
+-- Server version: 10.5.9-MariaDB-1:10.5.9+maria~focal
+-- PHP Version: 7.4.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -10496,14 +10496,15 @@ INSERT INTO `menu_sub` (`submenu_id`, `submenu_name`, `submenu_role`, `submenu_l
 (79, 'ทดลองส่งแจ้งเตือน', NULL, 'index.php?r=site/pages&view=push-onesignal', 'Y', 1, 11, 'fas fa-yen-sign', ''),
 (80, 'อุปกรณ์ทั้งหมด', NULL, 'index.php?r=equipment', 'Y', 29, 1, 'fas fa-barcode', ''),
 (81, 'เพิ่มข้อมูลอุปกรณ์', NULL, 'index.php?r=equipment/create', 'Y', 29, 2, 'fas fa-plus-square', ''),
-(82, 'Dashboard 1', NULL, 'index.php?r=users/dashbord', 'Y', 30, NULL, 'fas fa-project-diagram', ''),
-(83, 'Dashboard 2', NULL, 'index.php?r=users/dashbord2', 'Y', 30, NULL, 'fas fa-align-center', ''),
-(84, 'รายการบุกรุก', NULL, 'index.php?r=invasionlist', 'Y', 30, NULL, 'fas fa-building', ''),
+(82, 'Dashboard 1', NULL, 'index.php?r=users/dashbord', 'Y', 30, 0, 'fas fa-project-diagram', ''),
+(83, 'Dashboard 2', NULL, 'index.php?r=users/dashbord2', 'Y', 30, 1, 'fas fa-align-center', ''),
+(84, 'รายการบุกรุก', NULL, 'index.php?r=invasionlist', 'Y', 30, 2, 'fas fa-building', ''),
 (85, 'ข้อมูล AAA', NULL, 'index.php?r=eform-data/index&form_id=21', 'Y', 31, 1, 'fas fa-angry', ''),
 (86, 'เพิ่มข้อมูล ผกร.', NULL, 'index.php?r=site/pages&view=eform_dataperson&form_id=21', 'Y', 31, 2, 'far fa-angry', ''),
 (87, 'Dashboard', NULL, 'index.php?r=equipment/equipment-dashboard', 'Y', 29, 0, 'fas fa-adjust', ''),
 (88, 'ข้อมูลภาพรวม', NULL, 'index.php?r=organization/report', 'Y', 31, 0, 'fas fa-angry', ''),
-(89, 'จุดที่บุกรุก', NULL, 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', 'Y', 30, NULL, 'fas fa-map-marker', '');
+(89, 'จุดที่บุกรุก', NULL, 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', 'Y', 30, 3, 'fas fa-map-marker', ''),
+(90, 'แผนที่', NULL, 'index.php?r=site/pages&view=maps', 'Y', 30, 4, 'fas fa-map', '');
 
 -- --------------------------------------------------------
 
@@ -13844,7 +13845,8 @@ INSERT INTO `user_log_usaged` (`log_id`, `username`, `user`, `unit`, `log_date`,
 (1344, '1', 'Administrator', '', '2021-03-10 07:53:33', '2021-03-10', '1', '172.18.0.1', ''),
 (1345, '1', 'Administrator', '', '2021-03-10 09:45:59', '2021-03-10', '1', '172.18.0.1', ''),
 (1346, '1', 'Administrator', '', '2021-03-10 12:19:39', '2021-03-10', '1', '172.18.0.1', ''),
-(1347, '1', 'Administrator', '', '2021-03-11 12:39:17', '2021-03-11', '1', '172.29.0.1', '');
+(1347, '1', 'Administrator', '', '2021-03-11 12:39:17', '2021-03-11', '1', '172.29.0.1', ''),
+(1348, '1', 'Administrator', '', '2021-03-11 13:42:00', '2021-03-11', '1', '172.19.0.1', '');
 
 -- --------------------------------------------------------
 
@@ -13865,30 +13867,34 @@ CREATE TABLE `user_online` (
 --
 
 INSERT INTO `user_online` (`id`, `user_id`, `timestamp`, `ip`, `file`) VALUES
-(39638, '1', 1615466096, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=users/dashbord2'),
-(39639, '1', 1615466100, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=users/dashbord'),
-(39640, '1', 1615466107, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=users/dashbord2'),
-(39641, '1', 1615466168, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
-(39642, '1', 1615466171, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5'),
-(39643, '1', 1615466176, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
-(39644, '1', 1615466181, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5'),
-(39645, '', 1615466350, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
-(39646, '', 1615466351, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5'),
-(39647, '1', 1615466357, '172.29.0.1', '/ptt-ttm/frontend/web/index.php'),
-(39648, '1', 1615466365, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
-(39649, '1', 1615466368, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5'),
-(39650, '1', 1615466372, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
-(39651, '1', 1615466374, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5'),
-(39652, '1', 1615466419, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=kptag'),
-(39653, '1', 1615466423, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=kptag%2Fview&id=1'),
-(39654, '1', 1615466464, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=site/pages&view=maps'),
-(39655, '1', 1615466476, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=users/dashbord2'),
-(39656, '1', 1615466578, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
-(39657, '1', 1615466581, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5'),
-(39658, '1', 1615466588, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
-(39659, '1', 1615466594, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5'),
-(39660, '1', 1615466605, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=kptag'),
-(39661, '1', 1615466609, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=kptag%2Fview&id=1');
+(39666, '1', 1615469834, '172.19.0.1', '/ptt/frontend/web/index.php?r=site/maps&page/maps'),
+(39667, '1', 1615469843, '172.19.0.1', '/ptt/frontend/web/index.php?r=site/maps&page/map'),
+(39668, '1', 1615469906, '172.19.0.1', '/ptt/frontend/web/index.php?r=site/pages&views/maps'),
+(39669, '1', 1615469924, '172.19.0.1', '/ptt/frontend/web/index.php?r=site/pages&view=maps'),
+(39670, '1', 1615469946, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main'),
+(39671, '1', 1615469954, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main%2Fupdate&id=30'),
+(39672, '1', 1615469966, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main'),
+(39673, '1', 1615469973, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30'),
+(39674, '1', 1615469988, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-sub%2Fcreate&id_main=30'),
+(39675, '1', 1615469996, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30'),
+(39676, '1', 1615470002, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-sub/update&id=83&id_main=30'),
+(39677, '1', 1615470009, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30'),
+(39678, '1', 1615470015, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-sub%2Fcreate&id_main=30'),
+(39679, '1', 1615470052, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30'),
+(39680, '1', 1615470063, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30'),
+(39681, '1', 1615470068, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main/view&id=30'),
+(39682, '1', 1615470122, '172.19.0.1', '/ptt/frontend/web/index.php'),
+(39683, '1', 1615470151, '172.19.0.1', '/ptt/frontend/web/index.php?r=user-role'),
+(39684, '1', 1615470162, '172.19.0.1', '/ptt/frontend/web/index.php?r=user-role%2Fupdate&id=1&_pjax=%23user_role_index_pjax_id'),
+(39685, '1', 1615470165, '172.19.0.1', '/ptt/frontend/web/index.php?r=user-role%2Fupdate&id=1'),
+(39686, '1', 1615470201, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main'),
+(39687, '1', 1615470213, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30'),
+(39688, '1', 1615470221, '172.19.0.1', '/ptt/frontend/web/index.php?r=menu-main'),
+(39689, '1', 1615470244, '172.19.0.1', '/ptt/frontend/web/index.php?r=user-role'),
+(39690, '1', 1615470253, '172.19.0.1', '/ptt/frontend/web/index.php?r=user-role%2Fupdate&id=1&_pjax=%23user_role_index_pjax_id'),
+(39691, '1', 1615470256, '172.19.0.1', '/ptt/frontend/web/index.php?r=user-role%2Fupdate&id=1'),
+(39692, '1', 1615470268, '172.19.0.1', '/ptt/frontend/web/index.php?r=user-role%2Fview&id=1'),
+(39693, '1', 1615470283, '172.19.0.1', '/ptt/frontend/web/index.php?r=site/pages&view=maps');
 
 -- --------------------------------------------------------
 
@@ -13908,7 +13914,7 @@ CREATE TABLE `user_role` (
 --
 
 INSERT INTO `user_role` (`id`, `role`, `allow_access_main`, `allow_access_sub`) VALUES
-(1, 'supper_admin', '[\"30\",\"20\",\"26\",\"1\",\"12\",\"27\"]', '[\"82\",\"83\",\"84\",\"89\",\"57\",\"58\",\"59\",\"34\",\"5\",\"36\",\"4\",\"29\",\"3\",\"32\",\"31\",\"70\",\"71\"]'),
+(1, 'supper_admin', '[\"30\",\"20\",\"26\",\"1\",\"12\",\"27\"]', '[\"82\",\"83\",\"84\",\"89\",\"90\",\"57\",\"58\",\"59\",\"34\",\"5\",\"36\",\"4\",\"29\",\"3\",\"32\",\"31\",\"70\",\"71\"]'),
 (2, 'admin', '[\"17\",\"14\",\"27\"]', '[\"54\",\"76\",\"72\",\"73\",\"74\",\"75\",\"70\",\"71\"]'),
 (3, 'user_general', '[\"12\",\"4\",\"6\",\"8\",\"10\"]', '[\"30\",\"31\",\"28\",\"16\",\"17\",\"18\",\"19\",\"21\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"12\",\"13\",\"14\",\"15\"]'),
 (6, 'zeus', '[\"24\",\"23\",\"19\",\"17\",\"20\",\"26\",\"18\",\"1\",\"21\",\"16\",\"12\",\"15\",\"14\",\"27\",\"22\"]', '[\"64\",\"65\",\"66\",\"54\",\"57\",\"58\",\"59\",\"69\",\"55\",\"33\",\"60\",\"63\",\"62\",\"34\",\"5\",\"36\",\"4\",\"29\",\"3\",\"32\",\"47\",\"48\",\"49\",\"50\",\"51\",\"52\",\"53\",\"46\",\"68\",\"30\",\"39\",\"40\",\"44\",\"43\",\"41\",\"37\",\"45\",\"42\",\"31\",\"35\",\"76\",\"72\",\"73\",\"74\",\"75\",\"70\",\"71\",\"61\"]');
@@ -14130,7 +14136,39 @@ INSERT INTO `user_website_usaged` (`id`, `user_id`, `user_name`, `unit_id`, `uni
 (193, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:43:08', '172.29.0.1'),
 (194, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5', '2021-03-11 12:43:14', '172.29.0.1'),
 (195, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', '2021-03-11 12:43:25', '172.29.0.1'),
-(196, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag%2Fview&id=1', '2021-03-11 12:43:29', '172.29.0.1');
+(196, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag%2Fview&id=1', '2021-03-11 12:43:29', '172.29.0.1'),
+(197, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php', '2021-03-11 13:19:05', '172.19.0.1'),
+(198, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=site/map%E0%B8%AB', '2021-03-11 13:34:31', '172.19.0.1'),
+(199, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=site/maps', '2021-03-11 13:34:38', '172.19.0.1'),
+(200, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=site/maps', '2021-03-11 13:34:42', '172.19.0.1'),
+(201, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=site/maps&page/maps', '2021-03-11 13:37:14', '172.19.0.1'),
+(202, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=site/maps&page/map', '2021-03-11 13:37:23', '172.19.0.1'),
+(203, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=site/pages&views/maps', '2021-03-11 13:38:26', '172.19.0.1'),
+(204, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=site/pages&view=maps', '2021-03-11 13:38:44', '172.19.0.1'),
+(205, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main', '2021-03-11 13:39:06', '172.19.0.1'),
+(206, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main%2Fupdate&id=30', '2021-03-11 13:39:14', '172.19.0.1'),
+(207, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main', '2021-03-11 13:39:26', '172.19.0.1'),
+(208, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 13:39:33', '172.19.0.1'),
+(209, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-sub%2Fcreate&id_main=30', '2021-03-11 13:39:48', '172.19.0.1'),
+(210, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 13:39:56', '172.19.0.1'),
+(211, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-sub/update&id=83&id_main=30', '2021-03-11 13:40:02', '172.19.0.1'),
+(212, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 13:40:09', '172.19.0.1'),
+(213, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-sub%2Fcreate&id_main=30', '2021-03-11 13:40:15', '172.19.0.1'),
+(214, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 13:40:52', '172.19.0.1'),
+(215, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 13:41:03', '172.19.0.1'),
+(216, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main/view&id=30', '2021-03-11 13:41:08', '172.19.0.1'),
+(217, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php', '2021-03-11 13:42:02', '172.19.0.1'),
+(218, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=user-role', '2021-03-11 13:42:31', '172.19.0.1'),
+(219, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=user-role%2Fupdate&id=1&_pjax=%23user_role_index_pjax_id', '2021-03-11 13:42:42', '172.19.0.1'),
+(220, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=user-role%2Fupdate&id=1', '2021-03-11 13:42:45', '172.19.0.1'),
+(221, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main', '2021-03-11 13:43:21', '172.19.0.1'),
+(222, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 13:43:33', '172.19.0.1'),
+(223, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=menu-main', '2021-03-11 13:43:41', '172.19.0.1'),
+(224, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=user-role', '2021-03-11 13:44:04', '172.19.0.1'),
+(225, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=user-role%2Fupdate&id=1&_pjax=%23user_role_index_pjax_id', '2021-03-11 13:44:13', '172.19.0.1'),
+(226, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=user-role%2Fupdate&id=1', '2021-03-11 13:44:15', '172.19.0.1'),
+(227, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=user-role%2Fview&id=1', '2021-03-11 13:44:28', '172.19.0.1'),
+(228, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=site/pages&view=maps', '2021-03-11 13:44:42', '172.19.0.1');
 
 --
 -- Indexes for dumped tables
@@ -14441,7 +14479,7 @@ ALTER TABLE `menu_main`
 -- AUTO_INCREMENT for table `menu_sub`
 --
 ALTER TABLE `menu_sub`
-  MODIFY `submenu_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `submenu_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `news_values`
@@ -14543,13 +14581,13 @@ ALTER TABLE `user_group`
 -- AUTO_INCREMENT for table `user_log_usaged`
 --
 ALTER TABLE `user_log_usaged`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=1348;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=1349;
 
 --
 -- AUTO_INCREMENT for table `user_online`
 --
 ALTER TABLE `user_online`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=39662;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=39694;
 
 --
 -- AUTO_INCREMENT for table `user_role`
@@ -14561,7 +14599,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_website_usaged`
 --
 ALTER TABLE `user_website_usaged`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=197;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=229;
 
 --
 -- Constraints for dumped tables
