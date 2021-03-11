@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 10, 2021 at 01:52 PM
--- Server version: 10.5.9-MariaDB-1:10.5.9+maria~focal
--- PHP Version: 7.4.15
+-- Generation Time: Mar 11, 2021 at 12:44 PM
+-- Server version: 10.5.5-MariaDB-1:10.5.5+maria~focal
+-- PHP Version: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -10390,20 +10390,20 @@ INSERT INTO `menu_main` (`id`, `m_name`, `m_icon`, `m_link`, `m_role`, `m_type`,
 (14, 'ผู้ดูแลระบบของหน่วยงาน', 'fas fa-users-cog', '', NULL, 'left_side', 'Y', 0, 16, ''),
 (15, 'Dashboard - Super Admin', 'far fa-angry', '#', NULL, 'left_side', 'Y', 0, 15, ''),
 (16, 'DevOps', 'fas fa-cogs', '', NULL, 'center', 'Y', 0, 13, ''),
-(17, 'ระบบจัดการไฟล์', 'far fa-folder-open', 'index.php?r=site/pages&view=file-manager-all', NULL, 'center', 'Y', 0, 1, ''),
+(17, 'ระบบจัดการไฟล์', 'far fa-folder-open', 'index.php?r=site/pages&view=file-manager-all', NULL, 'center', 'Y', 0, 2, ''),
 (18, 'ลูกค้า', 'fas fa-user-tie', '', NULL, 'left_side', 'Y', 0, 10, ''),
 (19, 'อนุมัติข่าวสาร', 'fas fa-chalkboard-teacher', 'index.php?r=site/pages&view=dashboard-approve', NULL, 'left_side', 'Y', 0, 5, ''),
 (20, 'ผู้ใช้งานระบบ', 'fas fa-users', '', NULL, 'left_side', 'Y', 0, 8, ''),
 (21, 'บันทึก/รายงาน ข้อมูล', 'far fa-folder-open', 'index.php?r=site/pages&view=form', NULL, 'center', 'Y', 0, 12, 'แบบฟอร์มบันทึกข้อมูล'),
 (22, 'test1', 'fas fa-thermometer-empty', '#', NULL, 'center', 'Y', 0, 18, 'test'),
 (23, 'ดำเนินกรรมวิธีข่าว', 'far fa-newspaper', 'index.php?r=site/news-process', NULL, 'left_side', 'Y', 0, 4, ''),
-(24, 'จัดการฟอร์ม', 'far fa-file', '', NULL, 'left_side', 'Y', 0, 0, ''),
+(24, 'จัดการฟอร์ม', 'far fa-file', '', NULL, 'left_side', 'Y', 0, 1, ''),
 (26, 'ตั้งค่าตัวแปรระบบ', 'fas fa-cogs', 'index.php?r=setting', NULL, 'left_side', 'Y', 0, 9, ''),
 (27, 'โปรไฟล์', 'fas fa-user-cog', '', NULL, 'left_side', 'Y', 0, 17, ''),
 (28, 'สายข่าว', 'far fa-newspaper', 'index.php?r=undercover%2Fcreate', NULL, 'left_side', 'Y', 0, 7, 'เมนูของสายข่าว'),
 (29, 'อุปกรณ์', 'fas fa-mobile-alt', '', NULL, 'left_side', 'Y', 0, 6, ''),
-(30, 'ข้อมูลองค์กร', 'fas fa-sitemap', '', NULL, 'left_side', 'Y', 0, 2, 'ข้อมูลองค์กร'),
-(31, 'ข้อมูลผู้ก่อความไม่สงบ', 'fas fa-male', '', NULL, 'left_side', 'Y', 0, 3, '');
+(30, 'เมนูหลัก', 'fas fa-shekel-sign', '', NULL, 'left_side', 'Y', 0, 0, 'ข้อมูลองค์กร'),
+(31, 'AAA', 'fas fa-male', '', NULL, 'left_side', 'Y', 0, 3, '');
 
 -- --------------------------------------------------------
 
@@ -10496,13 +10496,14 @@ INSERT INTO `menu_sub` (`submenu_id`, `submenu_name`, `submenu_role`, `submenu_l
 (79, 'ทดลองส่งแจ้งเตือน', NULL, 'index.php?r=site/pages&view=push-onesignal', 'Y', 1, 11, 'fas fa-yen-sign', ''),
 (80, 'อุปกรณ์ทั้งหมด', NULL, 'index.php?r=equipment', 'Y', 29, 1, 'fas fa-barcode', ''),
 (81, 'เพิ่มข้อมูลอุปกรณ์', NULL, 'index.php?r=equipment/create', 'Y', 29, 2, 'fas fa-plus-square', ''),
-(82, 'Dashboard', NULL, 'index.php?r=organization/dashboard', 'Y', 30, NULL, 'fas fa-project-diagram', ''),
-(83, 'องค์กรทั้งหมด', NULL, 'index.php?r=organization', 'Y', 30, NULL, 'fas fa-align-center', ''),
-(84, 'เพิ่มองค์กร', NULL, 'index.php?r=organization/create', 'Y', 30, NULL, 'fas fa-building', ''),
-(85, 'ข้อมูล ผกร.', NULL, 'index.php?r=eform-data/index&form_id=21', 'Y', 31, 1, 'fas fa-angry', ''),
+(82, 'Dashboard 1', NULL, 'index.php?r=users/dashbord', 'Y', 30, NULL, 'fas fa-project-diagram', ''),
+(83, 'Dashboard 2', NULL, 'index.php?r=users/dashbord2', 'Y', 30, NULL, 'fas fa-align-center', ''),
+(84, 'รายการบุกรุก', NULL, 'index.php?r=invasionlist', 'Y', 30, NULL, 'fas fa-building', ''),
+(85, 'ข้อมูล AAA', NULL, 'index.php?r=eform-data/index&form_id=21', 'Y', 31, 1, 'fas fa-angry', ''),
 (86, 'เพิ่มข้อมูล ผกร.', NULL, 'index.php?r=site/pages&view=eform_dataperson&form_id=21', 'Y', 31, 2, 'far fa-angry', ''),
 (87, 'Dashboard', NULL, 'index.php?r=equipment/equipment-dashboard', 'Y', 29, 0, 'fas fa-adjust', ''),
-(88, 'ข้อมูลภาพรวม', NULL, 'index.php?r=organization/report', 'Y', 31, 0, 'fas fa-angry', '');
+(88, 'ข้อมูลภาพรวม', NULL, 'index.php?r=organization/report', 'Y', 31, 0, 'fas fa-angry', ''),
+(89, 'จุดที่บุกรุก', NULL, 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', 'Y', 30, NULL, 'fas fa-map-marker', '');
 
 -- --------------------------------------------------------
 
@@ -13842,7 +13843,8 @@ INSERT INTO `user_log_usaged` (`log_id`, `username`, `user`, `unit`, `log_date`,
 (1343, '1', 'Administrator', '', '2021-03-10 02:38:44', '2021-03-10', '1', '172.18.0.1', ''),
 (1344, '1', 'Administrator', '', '2021-03-10 07:53:33', '2021-03-10', '1', '172.18.0.1', ''),
 (1345, '1', 'Administrator', '', '2021-03-10 09:45:59', '2021-03-10', '1', '172.18.0.1', ''),
-(1346, '1', 'Administrator', '', '2021-03-10 12:19:39', '2021-03-10', '1', '172.18.0.1', '');
+(1346, '1', 'Administrator', '', '2021-03-10 12:19:39', '2021-03-10', '1', '172.18.0.1', ''),
+(1347, '1', 'Administrator', '', '2021-03-11 12:39:17', '2021-03-11', '1', '172.29.0.1', '');
 
 -- --------------------------------------------------------
 
@@ -13863,8 +13865,30 @@ CREATE TABLE `user_online` (
 --
 
 INSERT INTO `user_online` (`id`, `user_id`, `timestamp`, `ip`, `file`) VALUES
-(39560, '1', 1615380706, '172.18.0.1', '/ptt/frontend/web/index.php?r=invasionlist%2Findex&sort=idinvasionlist'),
-(39561, '1', 1615380887, '172.18.0.1', '/ptt/frontend/web/index.php?r=invasionlist%2Findex&sort=idinvasionlist');
+(39638, '1', 1615466096, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=users/dashbord2'),
+(39639, '1', 1615466100, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=users/dashbord'),
+(39640, '1', 1615466107, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=users/dashbord2'),
+(39641, '1', 1615466168, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
+(39642, '1', 1615466171, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5'),
+(39643, '1', 1615466176, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
+(39644, '1', 1615466181, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5'),
+(39645, '', 1615466350, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
+(39646, '', 1615466351, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5'),
+(39647, '1', 1615466357, '172.29.0.1', '/ptt-ttm/frontend/web/index.php'),
+(39648, '1', 1615466365, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
+(39649, '1', 1615466368, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5'),
+(39650, '1', 1615466372, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
+(39651, '1', 1615466374, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5'),
+(39652, '1', 1615466419, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=kptag'),
+(39653, '1', 1615466423, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=kptag%2Fview&id=1'),
+(39654, '1', 1615466464, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=site/pages&view=maps'),
+(39655, '1', 1615466476, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=users/dashbord2'),
+(39656, '1', 1615466578, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
+(39657, '1', 1615466581, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5'),
+(39658, '1', 1615466588, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist'),
+(39659, '1', 1615466594, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5'),
+(39660, '1', 1615466605, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=kptag'),
+(39661, '1', 1615466609, '172.29.0.1', '/ptt-ttm/frontend/web/index.php?r=kptag%2Fview&id=1');
 
 -- --------------------------------------------------------
 
@@ -13884,7 +13908,7 @@ CREATE TABLE `user_role` (
 --
 
 INSERT INTO `user_role` (`id`, `role`, `allow_access_main`, `allow_access_sub`) VALUES
-(1, 'supper_admin', '[\"20\",\"26\",\"1\",\"12\",\"27\"]', '[\"57\",\"58\",\"59\",\"34\",\"5\",\"36\",\"4\",\"29\",\"3\",\"32\",\"31\",\"70\",\"71\"]'),
+(1, 'supper_admin', '[\"30\",\"20\",\"26\",\"1\",\"12\",\"27\"]', '[\"82\",\"83\",\"84\",\"89\",\"57\",\"58\",\"59\",\"34\",\"5\",\"36\",\"4\",\"29\",\"3\",\"32\",\"31\",\"70\",\"71\"]'),
 (2, 'admin', '[\"17\",\"14\",\"27\"]', '[\"54\",\"76\",\"72\",\"73\",\"74\",\"75\",\"70\",\"71\"]'),
 (3, 'user_general', '[\"12\",\"4\",\"6\",\"8\",\"10\"]', '[\"30\",\"31\",\"28\",\"16\",\"17\",\"18\",\"19\",\"21\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"12\",\"13\",\"14\",\"15\"]'),
 (6, 'zeus', '[\"24\",\"23\",\"19\",\"17\",\"20\",\"26\",\"18\",\"1\",\"21\",\"16\",\"12\",\"15\",\"14\",\"27\",\"22\"]', '[\"64\",\"65\",\"66\",\"54\",\"57\",\"58\",\"59\",\"69\",\"55\",\"33\",\"60\",\"63\",\"62\",\"34\",\"5\",\"36\",\"4\",\"29\",\"3\",\"32\",\"47\",\"48\",\"49\",\"50\",\"51\",\"52\",\"53\",\"46\",\"68\",\"30\",\"39\",\"40\",\"44\",\"43\",\"41\",\"37\",\"45\",\"42\",\"31\",\"35\",\"76\",\"72\",\"73\",\"74\",\"75\",\"70\",\"71\",\"61\"]');
@@ -14004,7 +14028,109 @@ INSERT INTO `user_website_usaged` (`id`, `user_id`, `user_name`, `unit_id`, `uni
 (91, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=users', '2021-03-10 12:22:57', '172.18.0.1'),
 (92, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=invasionlist', '2021-03-10 12:28:12', '172.18.0.1'),
 (93, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=invasionlist%2Findex&sort=idinvasionlist', '2021-03-10 12:51:46', '172.18.0.1'),
-(94, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=invasionlist%2Findex&sort=idinvasionlist', '2021-03-10 12:54:47', '172.18.0.1');
+(94, '1', 'Administrator', '', '', 'http://localhost:7000/ptt/frontend/web/index.php?r=invasionlist%2Findex&sort=idinvasionlist', '2021-03-10 12:54:47', '172.18.0.1'),
+(95, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 11:51:17', '172.29.0.1'),
+(96, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord', '2021-03-11 11:51:27', '172.29.0.1'),
+(97, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', '2021-03-11 11:51:34', '172.29.0.1'),
+(98, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 11:51:38', '172.29.0.1'),
+(99, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main', '2021-03-11 11:51:47', '172.29.0.1'),
+(100, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fupdate&id=31', '2021-03-11 11:52:01', '172.29.0.1'),
+(101, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=31', '2021-03-11 11:52:07', '172.29.0.1'),
+(102, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-sub/update&id=85&id_main=31', '2021-03-11 11:52:19', '172.29.0.1'),
+(103, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=31', '2021-03-11 11:52:24', '172.29.0.1'),
+(104, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main', '2021-03-11 11:52:28', '172.29.0.1'),
+(105, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=setting', '2021-03-11 11:52:49', '172.29.0.1'),
+(106, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 11:53:13', '172.29.0.1'),
+(107, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 11:54:25', '172.29.0.1'),
+(108, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 11:55:03', '172.29.0.1'),
+(109, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 11:55:57', '172.29.0.1'),
+(110, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord2', '2021-03-11 11:56:06', '172.29.0.1'),
+(111, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main', '2021-03-11 11:56:56', '172.29.0.1'),
+(112, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fupdate&id=30', '2021-03-11 11:57:06', '172.29.0.1'),
+(113, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 11:57:19', '172.29.0.1'),
+(114, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=user-role', '2021-03-11 11:57:24', '172.29.0.1'),
+(115, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=user-role%2Fupdate&id=1&_pjax=%23user_role_index_pjax_id', '2021-03-11 11:57:28', '172.29.0.1'),
+(116, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=user-role%2Fupdate&id=1', '2021-03-11 11:57:28', '172.29.0.1'),
+(117, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=user-role%2Fview&id=1', '2021-03-11 11:58:02', '172.29.0.1'),
+(118, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main', '2021-03-11 11:58:30', '172.29.0.1'),
+(119, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main', '2021-03-11 11:58:43', '172.29.0.1'),
+(120, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main', '2021-03-11 11:58:44', '172.29.0.1'),
+(121, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fupdate&id=30', '2021-03-11 11:58:46', '172.29.0.1'),
+(122, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 11:58:50', '172.29.0.1'),
+(123, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-sub/update&id=82&id_main=30', '2021-03-11 11:58:53', '172.29.0.1'),
+(124, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 11:59:12', '172.29.0.1'),
+(125, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-sub/update&id=83&id_main=30', '2021-03-11 11:59:23', '172.29.0.1'),
+(126, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 11:59:45', '172.29.0.1'),
+(127, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-sub/update&id=84&id_main=30', '2021-03-11 11:59:51', '172.29.0.1'),
+(128, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 11:59:59', '172.29.0.1'),
+(129, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-sub/update&id=84&id_main=30', '2021-03-11 12:00:06', '172.29.0.1'),
+(130, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 12:00:14', '172.29.0.1'),
+(131, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-sub%2Fcreate&id_main=30', '2021-03-11 12:00:27', '172.29.0.1'),
+(132, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 12:00:38', '172.29.0.1'),
+(133, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-sub/update&id=89&id_main=30', '2021-03-11 12:00:47', '172.29.0.1'),
+(134, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=menu-main%2Fview&id=30', '2021-03-11 12:00:56', '172.29.0.1'),
+(135, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=user-role', '2021-03-11 12:01:00', '172.29.0.1'),
+(136, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=user-role%2Fupdate&id=1&_pjax=%23user_role_index_pjax_id', '2021-03-11 12:01:02', '172.29.0.1'),
+(137, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=user-role%2Fupdate&id=1', '2021-03-11 12:01:03', '172.29.0.1'),
+(138, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=user-role%2Fview&id=1', '2021-03-11 12:01:15', '172.29.0.1'),
+(139, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 12:01:19', '172.29.0.1'),
+(140, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord', '2021-03-11 12:01:21', '172.29.0.1'),
+(141, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord2', '2021-03-11 12:01:35', '172.29.0.1'),
+(142, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', '2021-03-11 12:02:20', '172.29.0.1'),
+(143, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag%2Fview&id=1', '2021-03-11 12:02:25', '172.29.0.1'),
+(144, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 12:02:28', '172.29.0.1'),
+(145, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord', '2021-03-11 12:03:51', '172.29.0.1'),
+(146, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', '2021-03-11 12:04:40', '172.29.0.1'),
+(147, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord2', '2021-03-11 12:04:41', '172.29.0.1'),
+(148, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:11:28', '172.29.0.1'),
+(149, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5', '2021-03-11 12:11:32', '172.29.0.1'),
+(150, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', '2021-03-11 12:16:07', '172.29.0.1'),
+(151, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:16:11', '172.29.0.1'),
+(152, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5', '2021-03-11 12:16:15', '172.29.0.1'),
+(153, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:16:19', '172.29.0.1'),
+(154, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', '2021-03-11 12:16:21', '172.29.0.1'),
+(155, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:16:23', '172.29.0.1'),
+(156, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord2', '2021-03-11 12:16:25', '172.29.0.1'),
+(157, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord', '2021-03-11 12:16:28', '172.29.0.1'),
+(158, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=user-role', '2021-03-11 12:25:41', '172.29.0.1'),
+(159, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', '2021-03-11 12:25:43', '172.29.0.1'),
+(160, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag%2Fcreate', '2021-03-11 12:25:46', '172.29.0.1'),
+(161, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag%2Findex', '2021-03-11 12:25:57', '172.29.0.1'),
+(162, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 12:27:05', '172.29.0.1'),
+(163, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users%2Fupdate&id=1', '2021-03-11 12:27:18', '172.29.0.1'),
+(164, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 12:27:21', '172.29.0.1'),
+(165, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord2', '2021-03-11 12:28:01', '172.29.0.1'),
+(166, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=site/pages&view=maps', '2021-03-11 12:29:15', '172.29.0.1'),
+(167, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=site/pages&view=maps', '2021-03-11 12:29:34', '172.29.0.1'),
+(168, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=site/pages&view=maps', '2021-03-11 12:30:41', '172.29.0.1'),
+(169, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=site/pages&view=maps', '2021-03-11 12:31:08', '172.29.0.1'),
+(170, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=site/pages&view=maps', '2021-03-11 12:31:17', '172.29.0.1'),
+(171, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord2', '2021-03-11 12:34:55', '172.29.0.1'),
+(172, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord', '2021-03-11 12:35:00', '172.29.0.1'),
+(173, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord2', '2021-03-11 12:35:07', '172.29.0.1'),
+(174, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:36:08', '172.29.0.1'),
+(175, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5', '2021-03-11 12:36:11', '172.29.0.1'),
+(176, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:36:16', '172.29.0.1'),
+(177, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5', '2021-03-11 12:36:21', '172.29.0.1'),
+(178, '309', 'admin_unit_1', '1', 'ยะลา  12', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:38:49', '172.29.0.1'),
+(179, '309', 'admin_unit_1', '1', 'ยะลา  12', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5', '2021-03-11 12:38:54', '172.29.0.1'),
+(180, '', '', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:39:10', '172.29.0.1'),
+(181, '', '', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5', '2021-03-11 12:39:11', '172.29.0.1'),
+(182, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php', '2021-03-11 12:39:17', '172.29.0.1'),
+(183, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:39:25', '172.29.0.1'),
+(184, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fupdate&id=5', '2021-03-11 12:39:28', '172.29.0.1'),
+(185, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:39:32', '172.29.0.1'),
+(186, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5', '2021-03-11 12:39:34', '172.29.0.1'),
+(187, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', '2021-03-11 12:40:19', '172.29.0.1'),
+(188, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag%2Fview&id=1', '2021-03-11 12:40:23', '172.29.0.1'),
+(189, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=site/pages&view=maps', '2021-03-11 12:41:04', '172.29.0.1'),
+(190, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=users/dashbord2', '2021-03-11 12:41:16', '172.29.0.1'),
+(191, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:42:58', '172.29.0.1'),
+(192, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5', '2021-03-11 12:43:01', '172.29.0.1'),
+(193, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist', '2021-03-11 12:43:08', '172.29.0.1'),
+(194, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=invasionlist%2Fview&id=5', '2021-03-11 12:43:14', '172.29.0.1'),
+(195, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag', '2021-03-11 12:43:25', '172.29.0.1'),
+(196, '1', 'Administrator', '', '', 'http://localhost:7000/ptt-ttm/frontend/web/index.php?r=kptag%2Fview&id=1', '2021-03-11 12:43:29', '172.29.0.1');
 
 --
 -- Indexes for dumped tables
@@ -14315,7 +14441,7 @@ ALTER TABLE `menu_main`
 -- AUTO_INCREMENT for table `menu_sub`
 --
 ALTER TABLE `menu_sub`
-  MODIFY `submenu_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `submenu_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT for table `news_values`
@@ -14417,13 +14543,13 @@ ALTER TABLE `user_group`
 -- AUTO_INCREMENT for table `user_log_usaged`
 --
 ALTER TABLE `user_log_usaged`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=1347;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=1348;
 
 --
 -- AUTO_INCREMENT for table `user_online`
 --
 ALTER TABLE `user_online`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=39562;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=39662;
 
 --
 -- AUTO_INCREMENT for table `user_role`
@@ -14435,7 +14561,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_website_usaged`
 --
 ALTER TABLE `user_website_usaged`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=95;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัส', AUTO_INCREMENT=197;
 
 --
 -- Constraints for dumped tables
