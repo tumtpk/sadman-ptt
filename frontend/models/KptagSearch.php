@@ -76,4 +76,20 @@ class KptagSearch extends Kptag
 
         return $dataProvider;
     }
+
+    public function filter($param)
+    {
+        $query = Kptag::find();
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $query->where('SP_KP=:status')
+            ->addParams([':status' => $param]);
+
+        return $dataProvider;
+    }
 }

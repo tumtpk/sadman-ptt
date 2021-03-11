@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Invasionlist */
 
 $this->title = $model->detail;
-$this->params['breadcrumbs'][] = ['label' => 'Invasionlists', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'รายการบุกรุก', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

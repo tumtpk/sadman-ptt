@@ -70,4 +70,20 @@ class InvasionlistSearch extends Invasionlist
 
         return $dataProvider;
     }
+
+    public function filter($param)
+    {
+        $query = Invasionlist::find();
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $query->where('kp_id=:status')
+            ->addParams([':status' => $param]);
+
+        return $dataProvider;
+    }
 }
