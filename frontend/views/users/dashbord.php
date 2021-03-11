@@ -7,6 +7,7 @@ $Numfix = array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11");
 $riskfix = array("เสี่ยงต่ำ", "เสี่ยงกลาง", "เสี่ยงสูง");
 $Numriskfix = array("1", "2", "3");
 $NumSumriskfix = array("10", "20", "30");
+$colortable = array('#44bf13', '#fff600', '#ff0505');
 
 // $casefix =Array("ตลิ่งชันขควนมืด","ควนมืด-สะพานรถไฟ","นาหม่อน","หาดใหญ่","บ้านพรุ","เขามีเกียตริ์","พังลา","ปริก","สะเดา");
 // $KPfix =Array("00-10","10-23","23-30","30-34","34-45","45-55","55-65","65-75","75-89");
@@ -119,6 +120,18 @@ $this->title = 'TextX';
         margin-bottom: 1em;
         font-size: 14px !important;
     }
+    .progress-bar-success{
+        background-color: #44bf13;
+    }
+    .progress-bar-danger{
+       
+        background-color:#ff0505;
+    
+    }
+    .progress-bar-warning{
+        background-color: #fff600;
+    }
+
 </style>
 
 <!-- <button class="button-new">ข้อมูลเพิ่มเติม</button > -->
@@ -139,7 +152,7 @@ $this->title = 'TextX';
                     <div class="col-12">
                         <div class="body-content">
                             <table class="table table-bordered">
-                                <thead>
+                                <thead class="">
                                     <tr>
                                         <th> </th>
                                         <?php
@@ -230,19 +243,44 @@ $this->title = 'TextX';
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-10">
-                        <div id="apex-chart-bar-column"></div>
-                        <!-- <div id="apex-chart-bar-full-column" ></div>      -->
+                    <div class="col-9">
+                            <div id="apex-chart-bar-column"></div>
+
+                            <div class="row">
+                                <div class="col-2">รวมเคสบุกรุกเขตระบบฯ</div>
+                                <div class="col-10">
+                                    <div class="row">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:64%">
+                                            64%
+                                        </div>
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="15"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:14%">
+                                        14%
+                                        </div>
+                                        <div class="progress-bar progress-bar-danger " role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:22%">
+                                        2%
+                                        </div> 
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            
                     </div>
-                    <div class="col-2">
+                    <div class="col-3">
                         <div class="body-content">
                             <table class="table table-bordered">
-                                <thead>
+                                <thead >
                                     <tr>
+                                    <th class="progress-bar-success">ความเสี่ยงต่ำ</th>
+                                    <th class="progress-bar-warning">เสี่ยงกลาง</th>
+                                    <th class="progress-bar-danger">เสี่ยงสูง</th>
                                         <?php
-                                        foreach ($riskfix as $value) {
-                                            echo '<th>' . $value . '</th>';
-                                        }
+                                        // foreach ($riskfix as $value) {
+                                        //     echo '<th >' . $value . '</th>';
+                                        // }
                                         ?>
                                     </tr>
                                 </thead>
@@ -270,7 +308,6 @@ $this->title = 'TextX';
                                 </tbody>
                             </table>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -406,13 +443,13 @@ $this->title = 'TextX';
             },
             series: [{
                 name: 'เสี่ยงต่ำ',
-                data: [44, 55, 41, 37, 22, 43, 21, 25, 47, 64]
+                data: [44, 55, 41, 37, 22, 43, 21, 25, 47]
             }, {
                 name: 'เสี่ยงกลาง',
-                data: [53, 32, 33, 52, 13, 43, 32, 33, 57, 14]
+                data: [53, 32, 33, 52, 13, 43, 32, 33, 57]
             }, {
                 name: 'เสี่ยงสูง',
-                data: [12, 17, 11, 9, 15, 11, 20, 8, 12, 22]
+                data: [12, 17, 11, 9, 15, 11, 20, 8, 12]
             }],
             colors: ['#44bf13', '#fff600', '#ff0505'],
             plotOptions: {
@@ -429,7 +466,7 @@ $this->title = 'TextX';
                 text: 'กราฟประเมิน บุกรุก ในแต่ละตำแหน่งของเขตระบบท่อส่งก๊าซฯ'
             },
             xaxis: {
-                categories: ["ตลิ่งชันขควนมืด", "ควนมืด-สะพานรถไฟ", "นาหม่อน", "หาดใหญ่", "บ้านพรุ", "เขามีเกียตริ์", "พังลา", "ปริก", "สะเดา", "รวม เคสบุกรุกบนเขตระบบฯ"],
+                categories: ["ตลิ่งชันควนมืด  KP 00-10 " , "ควนมืด-สะพานรถไฟ  KP 10-23 ", "นาหม่อน  KP 23-30 ", "หาดใหญ่  KP 30-34 ", "บ้านพรุ  KP 34-45 ", "เขามีเกียตริ์  KP 45-55 ", "พังลา  KP 55-65 ", "ปริก  KP 65-75 ", "สะเดา  KP 75-85 "],
             },
         };
         var chartbar = new ApexCharts(document.querySelector("#apex-chart-bar-column"), options);
