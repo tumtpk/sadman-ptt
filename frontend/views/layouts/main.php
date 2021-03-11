@@ -172,6 +172,15 @@ $user_font_size = Yii::$app->db->createCommand("SELECT font_size FROM `users` WH
   .btn-resize-disable-minus{
     pointer-events: none;
   }
+  .dropzone {
+    background: white;
+    border-radius: 5px;
+    border: 2px dashed rgb(0, 135, 247);
+    border-image: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
 
 <?php $this->beginPage();?>
@@ -200,6 +209,7 @@ $user_font_size = Yii::$app->db->createCommand("SELECT font_size FROM `users` WH
   <link rel="stylesheet" href="../../html-version/assets/css/theme1.css"/>
   <!-- style by pd -->
   <link rel="stylesheet" href="../../html-version/assets/css/style.css"/>
+  <link rel="stylesheet" href="dropzone/dropzone.css"/>
 
   <script type="text/javascript" src="../../js/jquery-3.5.1.min.js"></script>
 
