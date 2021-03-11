@@ -25,16 +25,19 @@ use yii\helpers\ArrayHelper;
             <?= $form->field($model, 'SP_KP') ?>
             <?php // $form->field($model, 'SP_KP')->dropdownList(ArrayHelper::map(Kptag::find()->all(), "SP_KP", "SP_KP"), ['prompt' => 'เลือก..']) 
             ?>
-            <?= $form->field($model, 'UTM_Indian_N') ?>
-
         </div>
         <div class="col-md-4">
             <?= $form->field($model, 'name_kp') ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <?= $form->field($model, 'UTM_Indian_N') ?>
+        </div>
+        <div class="col-md-4">
             <?= $form->field($model, 'UTM_Indian_E') ?>
         </div>
     </div>
-
-
     <?php // echo $form->field($model, 'UTM_WGS84_N') 
     ?>
 

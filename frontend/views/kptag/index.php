@@ -17,15 +17,12 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-xl-12 col-lg-12 col-md-12">
             <div class="card">
                 <div class="card-body ribbon">
-
                     <p>
                         <?= Html::a(Yii::t('app', 'เพิ่มจุดบุกรุก'), ['create'], ['class' => 'btn btn-success']) ?>
                     </p>
-
                     <?php
                     echo $this->render('_search', ['model' => $searchModel]);
                     ?>
-
                     <?= GridView::widget([
                         'dataProvider' => $dataProvider,
                         // 'filterModel' => $searchModel,

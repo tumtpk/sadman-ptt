@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model common\models\Kptag */
 
 $this->title = Yii::t('app', 'เพิ่มจุดบุกรุก');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Kptags'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'จุดบุกรุก'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="kptag-create">

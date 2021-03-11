@@ -12,24 +12,33 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+
     <div class="row">
-        <div class="col-md-4">
-            <?= $form->field($model, 'SP_KP')->textInput(['maxlength' => true]) ?>
-            <?= $form->field($model, 'UTM_Indian_N')->textInput() ?>
-            <?= $form->field($model, 'UTM_WGS84_N')->textInput() ?>
-            <?= $form->field($model, 'GEO_WGS84_Lat')->textInput() ?>
+        <div class="col-md-6"><?= $form->field($model, 'SP_KP')->textInput(['maxlength' => true]) ?></div>
+        <div class="col-md-6"><?= $form->field($model, 'name_kp')->textInput(['maxlength' => true]) ?></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"><?= $form->field($model, 'UTM_Indian_N')->textInput() ?></div>
+        <div class="col-md-6"><?= $form->field($model, 'UTM_Indian_E')->textInput() ?></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"><?= $form->field($model, 'UTM_WGS84_N')->textInput() ?></div>
+        <div class="col-md-6"><?= $form->field($model, 'UTM_WGS84_E')->textInput() ?></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"><?= $form->field($model, 'GEO_WGS84_Lat')->textInput() ?></div>
+        <div class="col-md-6"><?= $form->field($model, 'GEO_WGS84_Long')->textInput() ?></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
             <?= $form->field($model, 'GEO_WGS84_2_Lat')->textInput() ?>
         </div>
-        <div class="col-md-4">
-            <?= $form->field($model, 'name_kp')->textInput(['maxlength' => true]) ?>
-            <?= $form->field($model, 'UTM_Indian_E')->textInput() ?>
-            <?= $form->field($model, 'UTM_WGS84_E')->textInput() ?>
-            <?= $form->field($model, 'GEO_WGS84_Long')->textInput() ?>
+        <div class="col-md-6">
             <?= $form->field($model, 'GEO_WGS84_2_Long')->textInput() ?>
         </div>
-        <div class="col-md-8">
-            <?= $form->field($model, 'remark')->textInput(['maxlength' => true]) ?>
-        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><?= $form->field($model, 'remark')->textInput(['maxlength' => true]) ?></div>
     </div>
 
 </div>
