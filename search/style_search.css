@@ -1,0 +1,62 @@
+.spannum{margin-top: 3px;font-size: 12px;color: #6c757dc7;float: right;}
+.label-checkbox{
+	margin-left: 0.5em;
+}
+pre {
+	padding: 5px;
+	margin: 5px; 
+	color: #343a40d1 !important;
+	background-color: #ffffff; 
+}
+.string { color: green; }
+.number { color: blue; }
+.boolean { color: firebrick; }
+.null { color: magenta; }
+.key {     color: #343a40d1;
+	font-weight: 600; }
+	.saveupdate{
+		display: none;
+	}
+	.filemarker_latlong{
+		display: none;
+	}
+	.change-padding-left{
+		padding-left: 0px !important;
+	}
+	@media screen and (max-width: 600px) {
+		.change-padding-left{
+			padding-left: 15px !important;
+		}
+	}
+	.highlight {
+		color: #212529;
+		background-color: #ffc107;
+		border-radius: 5px;
+		padding: 0em;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	.pagination li{
+		padding: 0px;
+	}
+	.page-item .page-link{
+		color: #124660;
+	}
+	.page-item.active .page-link{
+		background-color: #124660;
+		border-color: #124660;
+	}
+	.custom-checkbox{
+		background-color: #ffffff;
+		padding: 7px;
+		border-radius: 5px;
+		border: 1px solid rgba(0,0,0,.125);
+	}
+	.btn.btn-primary.btn-block{
+		background-color: #014660;
+		border-color: #014660;
+		color: #ffffff;
+	}
+	.section-body{
+		border:1px solid #ffffff !important;
+	}

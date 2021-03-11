@@ -1,0 +1,61 @@
+.bg-blue{
+	background-color: #2185d0 !important;
+}
+.bg-red{
+	background-color: #db2828 !important;
+}
+.bg-purple{
+	background-color: #a333c8 !important;
+}
+.bg-teal {
+	background-color: #00b5ad !important;
+}
+.bg-green {
+	background-color: #21ba45 !important;
+}
+.bg-orange {
+	background-color: #f2711c !important;
+}
+.bg-header{
+	background-color: #e9ecef !important;
+}
+.card-body-padding{
+	padding: 2px 2px !important;
+
+}
+.card-body-height{
+	height: 150px !important;
+	overflow-y: scroll;
+	/*padding: 0em 1em 1em 1em;*/
+	margin-bottom: 1em;
+	font-size: 14px !important;
+}
+.textarea-height-auto{
+	height: -webkit-fill-available !important;
+}
+.sub{
+	width: auto;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #E9ECEF;
+	margin-bottom: 5px;
+
+}
+.sub-in-main{
+	width: max-content;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #E9ECEF;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+.sub-in-main i {
+	color: crimson;
+}
+#mynetwork {
+	width: 100%;
+	height: 800px;
+	background-color:#FFFFFF;
+}

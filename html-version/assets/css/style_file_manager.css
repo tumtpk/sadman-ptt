@@ -1,0 +1,48 @@
+.box-right{
+	float: right;
+}
+.card-footer{
+	padding: 10px !important;
+}
+.card-body-edit{
+	padding: 10px !important;
+}
+.pagination li {
+	margin-left: 3px;
+	color: black;
+	float: left;
+	padding: 0px !important;
+	text-decoration: none;
+	transition: background-color .3s;
+	background-color: #FFFFFF !important;
+	border-radius: 3px;
+}
+.pagination li.active {
+	background-color: #FFFFFF !important;
+}
+.dataTables_filter label{
+	color: #113f50 !important;
+}
+thead>tr>th{
+	font-weight: bold !important;
+	color: #113f50 !important;
+}
+.dataTables_filter, .dataTables_info { display: none; }
+.boder-design{
+	border: 1px solid #2185d0 !important;
+}
+.bg-blue{
+	background-color: #2185d0 !important;
+}
+.bg-red{
+	background-color: #db2828 !important;
+}
+.bg-purple{
+	background-color: #a333c8 !important;
+}
+.bg-teal {
+	background-color: #00b5ad !important;
+}
+.widgets2 .icon{
+	color: #dde1e4 !important;
+}

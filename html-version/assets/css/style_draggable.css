@@ -1,0 +1,52 @@
+.orange{
+  width: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.orangeArea{
+  width: 100%;
+  height: 100px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px;
+}
+.orange, .orangeArea {
+ background-color: #e0e0e0; 
+}
+.message-success-update{
+  width: 100%;
+  padding: 5px 5px 5px 10px;
+  margin-bottom: 5px;
+  background-color: #28A745;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-weight: 900;
+  font-size: 18px;
+}
+.message-false-update{
+  width: 100%;
+  padding: 5px 5px 5px 10px;
+  margin-bottom: 5px;
+  background-color: #DC3545;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-weight: 900;
+  font-size: 18px;
+}
+.box-group-draggable{
+  width: 20px;
+  height: 20px;
+  background-color: #3185D0;
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 5px;
+  padding-left: 1px;
+}
+
+
